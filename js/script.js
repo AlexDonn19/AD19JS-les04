@@ -44,10 +44,11 @@ for (var i = 1; i < 4; i++) {
       var checkBox = document.createElement('input');
       checkBox.setAttribute('type', 'checkbox');
       checkBox.setAttribute('id', 'line' + i + j);
-      var span = document.createElement('span');
-      span.innerHTML = 'Вариант ответа №' + j;
+      var label = document.createElement('label');
+      label.innerHTML = 'Вариант ответа №' + j;
+      label.setAttribute('for', 'line' + i + j);
       div.appendChild(checkBox);
-      div.appendChild(span);
+      div.appendChild(label);
       li.appendChild(div);
     }
   ol.appendChild(li);
